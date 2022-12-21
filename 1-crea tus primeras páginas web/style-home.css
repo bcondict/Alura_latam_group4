@@ -1,0 +1,45 @@
+.titulo-principal{
+    padding-left: 30px;
+}
+
+#banner {
+    width: 100%;
+}
+
+.principal{
+    background: #CCCCCC;
+    padding: 20px;
+}
+
+.titulo-centralizado{
+    text-align: center;
+}
+
+
+p{
+    text-align: center;
+}
+
+i b {
+    color: red;
+}
+
+#mision {
+    font-size: 20px;
+}
+
+.diferenciales{
+    background: #FFFFFF;
+    padding: 30px;
+}
+
+.items{
+    font-style: italic;
+}
+
+ul{
+    display: inline-block; /* evitar usar el salto de linea por defecto */
+    vertical-align: top; /* alinear texto con el borde superior de la imagen */
+    width: 20%;
+    margin-right: 15%;
+}

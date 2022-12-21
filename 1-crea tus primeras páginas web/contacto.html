@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto - barbería Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img src="imagenes/logo.png" alt="header_logo"></h1>
+                <nav>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <form action="">
+                <label for="nombre_apellido">Nombre y Apellido</label>
+                <input type="text" id="nombre_apellido" class="input-pattern">
+
+                <label for="correo_electronico">Correo electrónico</label>
+                <input type="text" id="correo_electronico" class="input-pattern">
+
+                <label for="telefono">Teléfono</label>
+                <input type="text" id="telefono" class="input-pattern">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea name="" id="mensaje" cols="70" rows="10"></textarea>
+
+                <div>
+                    <p>¿Cómo le gustaría que nos contactemos?</p>
+                    <label for="radio-email"><input type="radio" id="radio-email" name="contacto" value="email">Email</label>
+                    <label for="radio-telefono"><input type="radio" id="radio-email" name="contacto" value="telefono">Telefono</label>
+                    <label for="radio-whatsapp"><input type="radio" id="radio-email" name="contacto" value="whatsapp">WHatsapp</label>
+                </div>
+
+                <label for="" class="checkbox"><input type="checkbox">Le gustaría recibir novedades de la Barberia Alura?</label>
+
+                <input type="submit" value="Enviar formulario">
+            </form>
+        </main>
+
+        <footer>
+            <img src="imagenes/logo-blanco.png" alt="logo-blanco">
+            <p class="copyright">&copy; Copyright Barberia Alura - 2022</p>
+        </footer>
+    </body>
+</html>
