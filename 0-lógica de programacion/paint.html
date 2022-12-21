@@ -1,0 +1,92 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var puedoDibujar = false;
+
+    //variables to palet of colors
+    var xRed = 0;
+    var xGreen = 50;
+    var xBlue = 100;
+    var yBox = 0;
+    var box_size = 50;
+    var color = "blue"
+
+    function dibujarCirculo(x, y) {
+        if(puedoDibujar) {
+            pincel.fillStyle = color;
+            pincel.beginPath();
+            pincel.arc(x, y, 5, 0, 2 * 3.14);
+            pincel.fill();
+        }
+    }
+
+    function dibujarCuadrado(x, y, size, color) {
+        pincel.fillStyle = color;
+        pincel.fillRect(x, y, size, 50);
+        pincel.fill();
+    }
+
+    function paletaColores() {
+        dibujarCuadrado(xRed, yBox, box_size, "red");
+        dibujarCuadrado(xGreen, yBox, box_size, "green");
+        dibujarCuadrado(xBlue, yBox, box_size, "blue");
+    }
+
+    function habilitarDibujar() {
+        puedoDibujar = true;
+    }
+    function deshabilitarDibujar() {
+        puedoDibujar = false;
+    }
+
+    function unable_to_design(x_coordinate, y_coordinate) {
+        if (x_coordinate >= 0 && (x_coordinate < (3 * box_size + 5)) && 
+            (y_coordinate >=0 && y_coordinate < (box_size +5))) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function mouse_movements(evento) {
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+
+        if (unable_to_design(x, y)) {
+            dibujarCirculo(x, y);
+        }
+    }
+
+    function select_color(evento) {
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+
+        if (y > yBox && y < (yBox + box_size)) {
+            if (x > xRed && x < (xRed + box_size)) {
+                color = "red";
+                console.log(color);
+            } else if (x > xGreen && x < (xGreen + box_size)) {
+                color = "green";
+                console.log(color);
+            } else if (x > xBlue && x < (xBlue + box_size)) {
+                color = "blue";
+            }
+        }
+    }
+
+    pantalla.onmousemove = mouse_movements;
+
+    pantalla.onmousedown = habilitarDibujar;
+
+    pantalla.onmouseup = deshabilitarDibujar;
+
+    paletaColores();
+
+    pantalla.onclick = select_color;
+</script>

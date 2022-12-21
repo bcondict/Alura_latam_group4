@@ -1,0 +1,50 @@
+<meta charset="UTF-8">
+<h1>hola</h1>
+<canvas width="1200" height="800"></canvas>
+<script>
+    /*
+        diseño de canvas, disponible para seguir aprendiendo, grafico con canvas
+    */
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgrey";
+    pincel.fillRect(0, 0, 600, 400)
+
+    /*
+    function dibujarCuadrado(x, y, color) {
+
+        pincel.fillStyle = color;
+        pincel.fillRect(x, y, 50, 50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x, y, 50, 50)
+    }
+
+    for (var i = 0; i < 600; i += 50) {
+        dibujarCuadrado(i, 0, "red");
+        dibujarCuadrado(i, 50, "yellow");
+        dibujarCuadrado(i, 100, "green");
+    }
+    */
+
+    pincel.fillStyle = "lightgrey";
+    pincel.fillRect(600, 0, 600, 400);
+
+    function dibujarCirculo(x, y, radio, color) {
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2*3.14)
+        pincel.fill();
+    }
+
+    function dibujarFlor(x, y) {
+        dibujarCirculo(x, y, 10, "red");
+        dibujarCirculo(x, y+20, 10, "blue");
+        dibujarCirculo(x, y-20, 10, "yellow");
+        dibujarCirculo(x+20, y, 10, "black");
+        dibujarCirculo(x-20, y, 10, "orange");
+    }
+
+    dibujarFlor(900, 200);
+    dibujarFlor(300, 200);
+
+</script>

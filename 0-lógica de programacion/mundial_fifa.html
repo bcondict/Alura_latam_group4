@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA - JUEGO DE ADIVINACIÓN</h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var world_cup = 1930;
+    var limit = parseInt(prompt("Ingrese año límite para ser calculado el mundial"));
+
+    while (world_cup  <= limit) {
+        imprimir("There was a FIFA world cup in " + world_cup)
+        world_cup += 4;
+    }
+    alert("fin");
+</script>

@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function diferencia_edad(edad1, edad2) {
+        document.write("Nuestra diferencia de edad es " + (edad1 - edad2) + " años");
+        saltarLinea();
+    }
+
+    //calcula la diferencia de dos valores dados, recibe unicamente enteros
+    var edad1 = 19;
+    var edad2 = 17;
+    imprimir("Nuestra diferencia de edad es " + (edad1 - edad2) + " años");
+
+    diferencia_edad(edad1, edad2);
+
+</script>

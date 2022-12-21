@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function calcularIMC(peso, altura, nombre) {
+        let imc = peso / (altura * altura);
+
+        return(imc);
+    }
+
+    let nombre = prompt("informe su nombre");
+    let peso = parseInt(prompt("informe su peso"));
+    let altura = parseInt(prompt("informe su altura"));
+
+    imcCalculado = calcularIMC(peso, nombre)
+
+    imprimir(nombre + ", su imc calculado es: " + imcCalculado);
+
+    if (imcCalculado < 18.5) {
+        imprimir("Abajo de lo recomendado");
+    }
+    if (imcCalculado > 18.5 && imcCalculado < 24.9) {
+        imprimir("esta en su peso ideal");
+    }
+    if (imcCalculado > 24.9 && imcCalculado < 30) {
+        imprimir("Tiene sobrepeso");
+    }
+    if (imcCalculado >= 30) {
+        imprimir("Tiene obesidad");
+    }
+
+
+</script>
+

@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA - CALCULAR MULTIPLICADOR</h1>
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var i = 0
+
+    imprimir("WHILE");
+    while (i <= 10) {
+        imprimir(5 * i);
+        i++;
+    }
+
+    imprimir("FOR");
+    for (var j = 0; j <= 10; j++) {
+        imprimir(5 * j);
+    }
+</script>

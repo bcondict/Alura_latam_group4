@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA - IMPRIMIR LOS NUMEROS PARES DEL 1 AL 100</h1>
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var i = 1;
+    while(i <= 100) {
+        if (i % 2 == 0) {
+            imprimir(i)
+        }
+        i++;
+    }
+    imprimir("FIN")
+
+</script>
