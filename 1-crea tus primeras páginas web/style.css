@@ -25,7 +25,7 @@ nav a {
     color: #000;
     font-weight: bold; /*hacer la letra en negrita*/
     font-size: 22px;
-    text-decoration: none; /*quitar el ubrayado*/
+    text-decoration: none; /*quitar el aubrayado*/
 }
 
 nav a:hover {
@@ -94,7 +94,7 @@ form {
     margin: 40px 0;
 }
 
-form label, p {
+form label, legend {
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
@@ -109,6 +109,40 @@ form label, p {
 
 .checkbox {
     margin: 20px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background: red;
+    transform: scale(1.2);
+}
+
+/* table */
+table {
+    margin: 40px;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000;
+    padding: 8px 15px;
 }
 
 /*footer*/
