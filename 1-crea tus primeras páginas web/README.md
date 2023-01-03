@@ -36,6 +36,8 @@ table:
     - `<tbody></tbody>`: body of table
         - `<th></th>`: cells of tbody
 
+`<iframe src="url"></iframe>`: Allows us to create any kind of object in a box
+
 
 ### CSS:
 
@@ -49,4 +51,10 @@ table:
     - `display: inline-block`: mix of both, all the way of what it takes
 - `text-transform`: put takes how we likes
 - `text-decoration`: if it got a link, how we see it
+
+selector:
+- `main > p{}`: will take only first line in hierarchy.
+- `img + p {}`: will take the first paragraph after an image.
+- `img ~ p {}`: will take same line in hierarchy as img.
+- `main p:not(#id)`: will take all paragraph except one given
 
